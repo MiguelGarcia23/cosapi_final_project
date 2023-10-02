@@ -23,14 +23,14 @@ export const CardProject: FC<Props> = ({ img, alt, year, title }) => {
 
     return (
         
-        <Grid item sm={ 12 } lg={ 6 }>
+        <Grid item sm={ 12 } lg={ 6 } sx={{ width: '100%' }}>
 
             <Card className={ styles['projects-card'] } onClick={ handleClick }>
                 <CardActionArea sx={{ position: 'relative', width: '100%', height: '100%' }}>
 
                     <CardMedia
                         component='img'
-                        image={`http://localhost:3030/img/projects/${ img }`}
+                        image={`/projects/${ img }`}
                         alt={ alt }
                         sx={{ width: '100%', height: '100%' }}
                     />

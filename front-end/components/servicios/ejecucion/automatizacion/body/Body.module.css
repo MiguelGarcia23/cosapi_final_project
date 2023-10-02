@@ -4,6 +4,12 @@
     padding: 5rem 0;
 }
 
+/* Intro de la página */
+.automation-intro {
+    padding: 0 2rem;
+    margin-bottom: 2.5rem;
+}
+
 /* Título de intro a la página */
 .automation-intro-title {
     display: block !important;
@@ -18,10 +24,20 @@
     font-weight: 700 !important; 
 }
 
+/* Footer de la página */
+.automation-footer {
+    padding: 0 2rem;
+}
+
 /* -------------------------------- MEDIA QUERIES ------------------------------- */
 
 /* Media queries versión Tablet */
 @media (min-width: 768px){
+
+    /* Intro de la página */
+    .automation-intro {
+        padding: 0 3.75rem;
+    }
 
     /* Título de intro a la página */
     .automation-intro-title {
@@ -31,5 +47,10 @@
     /* Link del título de intro a la página */
     .automation-intro-subtitle {
         width: 85% !important;
+    }
+
+    /* Footer de la página */
+    .automation-footer {
+        padding: 0 3.75rem;
     }
 }

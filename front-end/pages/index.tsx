@@ -7,6 +7,7 @@ import { backend } from '../backend';
 import { Project, ProjectListResponse } from '../interfaces';
 import { Layout } from '../components/layouts';
 import { FormContact, Gallery, Infrastructure, MainBanner, MainServices, Welcome } from '../components/home';
+import { projects } from '../utils/data/projects';
 
 interface Props {
   projects: Project[];
@@ -42,13 +43,15 @@ const HomePage: FC<Props> = ({ projects }) => {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
 
-  const { data } = await backend.get<ProjectListResponse>('/proyectos/favoritos');
+  /* const { data } = await backend.get<ProjectListResponse>('/proyectos/favoritos'); */
 
-  const projects: Project[] = data.projects;
+  /* const projects: Project[] = require('../utils/data/projects.json'); */
+
+  /* const projects: Project[] = data.projects; */
 
   return {
     props: {
-      projects
+      projects: projects.slice( 0, 4 )
     }
   }
 }

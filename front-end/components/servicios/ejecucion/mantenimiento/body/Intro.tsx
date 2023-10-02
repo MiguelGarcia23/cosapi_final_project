@@ -8,7 +8,7 @@ export const IntroMaintenance: FC = () => {
 
     return (
 
-        <Box sx={{ marginBottom: '2.5rem', padding: '0 3.75rem' }}>
+        <Box className={ styles['maintenance-intro']}>
 
             <Typography variant='h5' color='info.dark' fontWeight={ 400 } className={ styles['maintenance-intro-title']}>
                 En Cosapi ofrecemos soluciones para ayudarte a maximizar el valor y funcionamiento de tus maquinarias, ya que ponemos a tu disposición cualquier tipo de mantenimiento, bien sea para optimizar el rendimiento y la calidad de los equipos o para realizar reparaciones y corregir errores.    

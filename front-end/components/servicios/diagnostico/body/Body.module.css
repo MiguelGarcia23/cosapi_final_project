@@ -1,7 +1,7 @@
 /* Body de la página */
 .diagnostic-body {
     background-color: white;
-    padding: 5rem 3.75rem;
+    padding: 5rem 2rem;
 }
 
 /* Título de intro a la página */
@@ -40,6 +40,11 @@
 
 /* Media queries versión Tablet */
 @media (min-width: 768px){
+
+    /* Body de la página */
+    .diagnostic-body {
+        padding: 5rem 3.75rem;
+    }
 
     /* Título de intro a la página */
     .diagnostic-intro-title {

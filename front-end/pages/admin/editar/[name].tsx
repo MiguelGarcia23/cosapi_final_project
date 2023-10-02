@@ -4,7 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { Box } from '@mui/material';
 
 import authenticatedRoute from '../../../auth/AuthenticatedRoute';
-import { backend } from '../../../backend';
+/* import { backend } from '../../../backend'; */
 import { Project, ProjectListResponse } from '../../../interfaces';
 import { getProjectInfo } from '../../../utils';
 import { Layout } from '../../../components/layouts';
@@ -34,7 +34,7 @@ const EditProjectPage: FC<Props> = ({ project }) => {
     )
 }
 
-export const getStaticPaths: GetStaticPaths = async (ctx) => {
+/* export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
     const { data } = await backend.get<ProjectListResponse>('/proyectos');
 
@@ -69,6 +69,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         revalidate: 86400,
       }
     }
-}
+} */
 
 export default authenticatedRoute( EditProjectPage );

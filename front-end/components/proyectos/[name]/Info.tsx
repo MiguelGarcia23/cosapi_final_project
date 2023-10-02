@@ -46,8 +46,8 @@ export const InfoProject: FC<Props> = ({ duration, image_company, year }) => {
 
                 <Box className={ styles['project-info-container'] }>
                     <Image 
-                        src= {`http://localhost:3030/img/companies/${ image_company }`}
-                        alt= 'PDVSA'
+                        src= {`/companies/${ image_company }`}
+                        alt= 'Imagen de Compañía del trabajo'
                         width= { 255 }
                         height= { 100 }
                     />

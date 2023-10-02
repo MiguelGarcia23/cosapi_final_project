@@ -242,13 +242,13 @@ export const BodyEditProject: FC<Props> = ({ project }) => {
             formData.append('image_company', data.image_company);
             formData.append('services', newServicesArray.length > 0 ? newServicesArray.join(', ') : data.services.join(', ') );
             
-            fetch(`http://localhost:3030/admin/editar/${ project.name }`, {
+            /* fetch(`http://localhost:3030/admin/editar/${ project.name }`, {
                 method: "POST",
                 body: formData,
             })
                 .then(response => {
                     return response.json()
-                });
+                }); */
             
             event.target.reset();
             router.push('/proyectos');
@@ -299,7 +299,8 @@ export const BodyEditProject: FC<Props> = ({ project }) => {
                         <Box sx={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', alignItems: 'center', marginBottom: '0.5rem' }}>
                             <Typography variant='body1' color='info.dark' sx={{ marginRight: '0.5rem' }}>Imagen previa: </Typography>
                             <Image 
-                                src={`http:/localhost:3030/img/projects/${ project.image_project }`}
+                                /* src={`http:/localhost:3030/img/projects/${ project.image_project }`} */
+                                src=''
                                 alt={`Imagen del proyecto de ${ project.name }`}
                                 height={ 100 }
                                 width={ 120 }
@@ -314,7 +315,8 @@ export const BodyEditProject: FC<Props> = ({ project }) => {
                         <Box sx={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', alignItems: 'center', marginBottom: '0.5rem' }}>
                             <Typography variant='body1' color='info.dark' sx={{ marginRight: '0.5rem' }}>Imagen previa: </Typography>
                             <Image 
-                                src={`http:/localhost:3030/img/companies/${ project.image_company }`}
+                                /* src={`http:/localhost:3030/img/companies/${ project.image_company }`} */
+                                src=''
                                 alt={`Imagen de la empresa de ${ project.name }`}
                                 height={ 100 }
                                 width={ 120 }

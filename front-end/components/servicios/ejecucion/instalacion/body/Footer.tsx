@@ -5,6 +5,8 @@ import { Box, Button, Typography } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import styles from './Body.module.css';
+
 
 export const FooterInstallation: FC = () => {
 
@@ -20,7 +22,7 @@ export const FooterInstallation: FC = () => {
 
     return (
 
-        <Box data-aos='fade-up' sx={{ padding: '0 3.75rem' }}>
+        <Box data-aos='fade-up' className={ styles['installation-footer']}>
 
             <Typography variant='h3' color='info.dark' sx={{ marginBottom: '1rem' }}>
                 ¿Listo para instalar tus equipos?

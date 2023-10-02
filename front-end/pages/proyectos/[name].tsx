@@ -1,4 +1,5 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { Box } from '@mui/material';
@@ -8,13 +9,39 @@ import { Project, ProjectListResponse } from '../../interfaces';
 import { getProjectInfo } from '../../utils';
 import { Layout } from '../../components/layouts';
 import { BodyProject } from '../../components/proyectos';
+import { projects } from '../../utils/data/projects';
 
 interface Props {
-    project: Project;
+    projects: Project[];
+    params: {
+        name: string;
+    };
 }
 
 
-const ProjectPage: FC<Props> = ({ project }) => {
+const ProjectPage: FC<Props> = ({ projects, params }) => {
+
+    const [ project, setProject ] = useState({
+        id: 0,
+        name: '',
+        duration: 0,
+        year: 0,
+        image_project: '',
+        image_company: '',
+        services: []
+    });
+
+    useEffect(() => {
+      
+        const projectDetail: any = projects.find( ( project: any ) => {
+            let nameProject = project.name;
+    
+            return params.name == nameProject.toLowerCase();
+        });
+
+        setProject( projectDetail );
+
+    }, []);
 
     return (
 
@@ -33,23 +60,17 @@ const ProjectPage: FC<Props> = ({ project }) => {
     )
 }
 
-export const getStaticPaths: GetStaticPaths = async (ctx) => {
-
-    const { data } = await backend.get<ProjectListResponse>('/proyectos');
-
-    const projectsNames: string[] = data.projects.map( project => project.name );
-
-    return {
-        paths: projectsNames.map( name => ({
-            params: { name }
-        })),
-        fallback: 'blocking'
-    }
-}
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+/* export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const { name } = params as { name: string };
+
+    const projects = require('../../utils/data/projects.json');
+
+    const project = projects.filter( ( project: any ) => {
+        let nameProject = project.name;
+
+        return name == nameProject.toLowerCase();
+    })
 
     const project = await getProjectInfo( name );
 
@@ -64,8 +85,42 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   
     return {
       props: {
-        project,
+        project: project[0],
         revalidate: 86400,
+      }
+    }
+} */
+
+export const getStaticPaths: GetStaticPaths = async (ctx) => {
+
+    /* const projects = require('../../utils/data/projects.json'); */
+
+    /* const { data } = await backend.get<ProjectListResponse>('/proyectos'); */
+
+    const projectsNames: string[] = projects.map( ( project: any ) => project.name );
+
+    return {
+        paths: projectsNames.map( name => ({
+            params: { name }
+        })),
+        fallback: 'blocking'
+    }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+
+    /* const { data } = await backend.get<ProjectListResponse>('/proyectos'); */
+
+    /* const projects = require('../../utils/data/projects.json'); */
+
+    /* const { data } = await dataProjects;
+  
+    const projects: Project[] = data.projects; */
+  
+    return {
+      props: {
+        projects,
+        params
       }
     }
 }

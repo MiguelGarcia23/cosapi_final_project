@@ -7,6 +7,8 @@
 .contact-intro {
     display: block;
     margin: 0 auto;
+    padding: 0 2rem;
+    margin-bottom: 3.75rem;
 }
 
 /* Formulario de contacto */
@@ -73,7 +75,7 @@
     /* Intro a la página */
     .contact-intro {
         width: 85%;
-        padding: 0;
+        padding: 0 3.75rem;
     }
 }
 

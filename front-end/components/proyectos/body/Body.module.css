@@ -5,9 +5,16 @@
 
 /* Cada tarjeta de proyecto */
 .projects-card{
+    height: 300px;
+    width: 100%;
     max-width: 500px;
     margin: 0 auto;
     margin-bottom: 1rem;
+    transition: opacity .2s;
+}
+
+.projects-card:hover {
+    opacity: 0.8 !important;
 }
 
 /* Info de cada tarjeta de proyecto */

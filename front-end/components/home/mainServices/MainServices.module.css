@@ -14,3 +14,12 @@
     flex-wrap: nowrap;
     align-items: center;
 }
+
+/* Tarjeta de servicio */
+.card-service-home {
+    transition: opacity .2s;
+}
+
+.card-service-home:hover {
+    opacity: 0.9 !important;
+}

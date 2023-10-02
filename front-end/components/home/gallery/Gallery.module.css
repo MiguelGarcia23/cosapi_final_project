@@ -5,8 +5,14 @@
 
 /* Cada proyecto de la galería */
 .gallery-home-project{
+    height: 300px;
     max-width: 500px;
     margin: 0 auto;
+    transition: opacity .2s;
+}
+
+.gallery-home-project:hover {
+    opacity: 0.8 !important;
 }
 
 /* Info de cada proyecto de la galería */

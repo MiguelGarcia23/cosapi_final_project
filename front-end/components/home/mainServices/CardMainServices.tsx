@@ -31,7 +31,7 @@ export const CardMainServices: FC<Props> = ({ img, alt, subtitle, title, link })
     return (
 
         <Grid item sm={ 12 } md={ 6 } lg={ 4 }>        
-            <Card sx={{ maxWidth: 425, margin: '0px auto' }} onClick={ handleClick }>
+            <Card sx={{ maxWidth: 425, margin: '0px auto' }} onClick={ handleClick } className={ styles['card-service-home'] }>
                 <CardActionArea>
                     <CardMedia
                         component='img'

@@ -14,7 +14,7 @@ export const IntroContact: FC = () => {
 
     return (
 
-        <Box data-aos='fade-up' sx={{ padding: '0 3.75rem', marginBottom: '3.75rem' }}>
+        <Box data-aos='fade-up'>
 
             <Box className={ styles['contact-intro']}>
                 <Typography variant='h5' color='info.dark'>

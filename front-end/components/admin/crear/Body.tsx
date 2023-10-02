@@ -239,13 +239,13 @@ export const BodyCreateProject: FC = () => {
             formData.append('image_company', data.image_company);
             formData.append('services', data.services ? data.services : newServicesArray.join(', '));
             
-            fetch('http://localhost:3030/admin/crear', {
+            /* fetch('http://localhost:3030/admin/crear', {
                 method: "POST",
                 body: formData,
             })
                 .then(response => {
                     return response.json()
-                });
+                }); */
             
             event.target.reset();
             router.push('/proyectos');

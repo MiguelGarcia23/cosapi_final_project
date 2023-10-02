@@ -29,7 +29,7 @@ export const CardGallery: FC<Props> = ({ img, alt, year, title }) => {
 
                     <CardMedia
                         component='img'
-                        image={`http://localhost:3030/img/projects/${ img }`}
+                        image={`/projects/${ img }`}
                         alt={ alt }
                         sx={{ width: '100%', height: '100%' }}
                     />

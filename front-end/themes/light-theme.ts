@@ -35,7 +35,7 @@ export const lightTheme = createTheme({
             fontSize: '2.5rem',
             fontWeight: 900,
             letterSpacing: '2%',
-            lineHeight: '140%',
+            lineHeight: '110%',
             marginBottom: '1.5rem',
             textAlign: 'center'
         },

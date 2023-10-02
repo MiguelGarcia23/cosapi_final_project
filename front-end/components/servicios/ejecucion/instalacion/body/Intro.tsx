@@ -8,7 +8,7 @@ export const IntroInstallation: FC = () => {
 
     return (
 
-        <Box sx={{ marginBottom: '2.5rem', padding: '0 3.75rem' }}>
+        <Box className={ styles['installation-intro']}>
 
             <Typography variant='h5' color='info.dark' fontWeight={ 400 } className={ styles['installation-intro-title']}>
                 Instalar equipos que sean accesibles y seguros requiere tanto una estrategia inteligente como los productos correctos. En Cosapi ofrecemos la experiencia y los conocimientos de la industria necesarios, para brindar el soporte técnico que haga de tu próximo proyecto todo un éxito.    

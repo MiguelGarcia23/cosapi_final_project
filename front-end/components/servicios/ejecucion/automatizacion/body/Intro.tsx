@@ -8,7 +8,7 @@ export const IntroAutomation: FC = () => {
 
     return (
 
-        <Box sx={{ marginBottom: '2.5rem', padding: '0 3.75rem' }}>
+        <Box className={ styles['automation-intro']}>
 
             <Typography variant='h5' color='info.dark' fontWeight={ 400 } className={ styles['automation-intro-title']}>
                 En Cosapi ofrecemos servicios de automatización para optimizar y mejorar el funcionamiento de tu planta industrial mediante la incorporación y uso sistemático de varios tipos de sistemas o elementos computarizados, electromecánicos, electroneumáticos y electrohidráulicos.    
